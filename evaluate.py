@@ -67,8 +67,6 @@ def calculate(problem, var):
           if token == '=': # assign variables
             if bool([ch for ch in problem[i - 1] if ord(ch) in VALID_VAR_CHARS]) \
             and isinstance(problem[i + 1], (int)):
-              print('x')
-              time.sleep(1)
               var[problem[i - 1]] = problem[i + 1]
               # remove the assignment
               problem.pop(i - 1)
